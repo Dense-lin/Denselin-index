@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .dingbu{
+    background-image: url("./../img/171916.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    animation: chuxian 2s ease-out forwards;
+    background-size: cover;
+    min-width: 870px;
+  }
+  li,a,button{
+    font-weight: 500;
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+    text-decoration: none;
+  }
+  /* 顶部导航栏 */
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: 30px;
+  }
+  .logo{
+    cursor: pointer;
+    padding: 5px;
+    height: 50px;
+  }
+  .logo h1{
+    color: rgb(224, 216, 216);
+  }
+  .nav{
+    cursor: pointer;
+    list-style: none;
+  }
+  .nav li{
+    display: inline-block;
+    padding: 0px 40px;
+  }
+  .nav li a{
+    transition: all 0.3s ease-out;
+  }
+  .nav li a:hover{
+    color: rgb(173, 171, 165);
+  }
+  /* 导航栏2 */
+  /* .header2{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: 30px;
+  } */
+  .header2 {
+    display: none; /* 初始隐藏 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 252, 251, 0.9); /* 导航栏2背景色 */
+    backdrop-filter: blur(10px);   
+    min-width: 870px;
+    z-index: 1000;
+  }
+  .logo2 {
+    cursor: pointer;
+    padding: 3px;
+    height: 30px;
+  }
+  
+  .logo2 h1 {
+    color: rgb(0, 0, 0);
+  }
+  
+  .nav2 {
+    display: flex;
+    align-items:center;
+    height: 50px;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .nav2 li {
+    display: inline-block;
+    padding: 0px 40px;
+  }
+  
+  .nav2 li a {
+    color: black;
+    transition: all 0.1s ease-out;
+  }
+  
+  .nav2 li a:hover {
+    color: rgb(173, 171, 165);
+  }
+  .logo2{
+    cursor: pointer;
+    padding: 5px;
+    height: 50px;
+  }
+  .logo2 h1{
+    color: rgb(0, 0, 0);
+  }
+  .nav2{
+    cursor: pointer;
+    list-style: none;
+  }
+  .nav2 li{
+    display: inline-block;
+    padding: 0px 40px;
+  }
+  .nav2 li a{
+    color: black;
+    transition: all 0.3s ease-out;
+  }
+  .nav2 li a:hover{
+    color: rgb(173, 171, 165);
+  }
+  /* 首页 */
+  .shouye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96.7vh;
+  }
+  .zhuyebiaoti{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 500px;
+    padding-bottom: 20%;
+    backdrop-filter: blur(1px);
+  }
+  .zhuyebiaoti h1{
+    text-align: center;
+    /* text-decoration: underline; */
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+  }
+  .zhuyebiaoti h3{
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+  }
+  .icon-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .DownOut {
+    font-size: 40px; /* 设置图标的大小，可以根据需要调整 */
+    color: white; /* 将图标颜色设置为白色 */
+    animation: float 3s ease-in-out infinite; /* 添加动画，持续时间3秒，无限次重复 */
+    cursor: pointer;
+  }
+  @keyframes float {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  
+  /* 跳动的线 */
+  .xiahua{
+    height: 9px;
+    width: 60px;
+    --c:no-repeat linear-gradient(#ffb0b0 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 26% 3px;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {
+    0%,
+    70%,
+    100%   {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    11.67% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    23.33% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    35%    {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+    46.67% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+    58.34% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 100%}
+  }
+  /* 关于  */
+  .about{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    line-height: 1.75;
+    background-color: #ffffff;
+  }
+  .about h1{
+    font-weight: 150;
+    background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .about h3{
+    font-weight: 100;
+    font-style: italic;
+  }
+  .about a{
+    font-size: large;
+    font-style: italic;
+    color: rgb(102, 159, 209);
+  }
+  /* 变形的球球 */
+  .loader{    
+    width: 70px;
+    height: 60px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    mix-blend-mode: darken;
+    display: grid;
+    filter: blur(4px) contrast(10) hue-rotate(270deg);
+  }
+  .loader:before,
+  .loader:after {
+    content:"";
+    grid-area: 1/1;
+    animation: l2 3s infinite linear;
+    background:#ff00ff;
+    border-radius: 50%;
+  }
+  .loader:after {
+    animation-delay: -.8s;
+  }
+  @keyframes l2{
+    12.5% {border-radius: 37% 63% 70% 30% / 30% 62% 38% 70%}
+    25%   {border-radius: 84% 16% 15% 85% / 55% 79% 21% 45%}
+    37.5% {border-radius: 73% 27% 74% 26% / 64% 32% 68% 36%}
+    50%   {border-radius: 73% 27% 18% 82% / 52% 32% 68% 48%}
+    62.5% {border-radius: 33% 67% 18% 82% / 52% 75% 25% 48%}
+    75%   {border-radius: 12% 88% 69% 31% / 10% 66% 34% 90%}
+    87.5% {border-radius: 50% 50% 70% 30% / 52% 62% 38% 48%}
+  }
+  
+  /* 喜欢 */
+  .favorite{
+    display: flex;
+    
+  }
+  
