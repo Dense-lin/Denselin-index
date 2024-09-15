@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   .dingbu{
-    background-image: url("./../img/171916.jpg");
+    background-image: url("/public/img/171916.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment:fixed;
